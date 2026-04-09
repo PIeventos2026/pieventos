@@ -1,3 +1,3 @@
 # Projeto integrador fatec 2026 
-Desenvolvimento de um site para os eventos da Fatec Taquaritinga 
+Agendamento academico de Eventos. Foco na comunidade de docentes da Fatec Taquaritinga, criar um canal para o agendamento de espaço e eventos na Fatec Taquaritinga. 
 
