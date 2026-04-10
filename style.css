@@ -1,0 +1,206 @@
+/* TOPO PRETO */
+.topo-preto {
+    background-color: #000;
+    padding: 8px 0;
+}
+
+.topo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo-preto img {
+    height: 40px;
+}
+
+.topo-icons span {
+    color: #ccc;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+/* ÁREA BRANCA (ESSA É A PARTE MAIS IMPORTANTE) */
+.topo-branco {
+    background-color: #efefef;
+    padding: 20px 0;
+}
+
+.topo-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGOS */
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* espaço entre Fatec e CPS */
+}
+
+.logo-fatec {
+    height: 55px;
+}
+
+.logo-sp {
+    height: 65px;
+}
+
+/* BUSCA (AJUSTADA PRA FICAR IGUAL) */
+.busca {
+    display: flex;
+    align-items: center;
+}
+
+.busca input {
+    width: 320px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 14px;
+    background-color: #f8f8f8;
+}
+
+.busca button {
+    padding: 12px 18px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+/* MENU */
+.menu {
+    background-color: #c40000;
+    
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    color: white;
+    padding: 15px 18px;
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #a30000;
+}
+
+/*BODY*/
+.eventos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-left: 5px solid #003366;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/*AGENDAMENTO*/
+.agendamento form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.agendamento input,
+.agendamento select,
+.agendamento textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.agendamento button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-fatec {
+    height: 50px;
+}
+
+.logo-cps {
+    height: 60px;
+}
+
+/* BUSCA */
+.busca {
+    display: flex;
+    align-items: center;
+}
+
+.busca input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.busca button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.link{
+    color: white;
+    padding: 15px 18px;
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    text-decoration: none;
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fatec Taquaritinga</title>
+ </head>
+ <body>
+<script src="script.js"></script>
+<header>
+
+    <!-- TOPO PRETO -->
+    <div class="topo-preto">
+        <div class="container topo-content">
+      <img src="img/logo-governo-do-estado-sp.png" class="logo-sp">
+        
+        </div>
+    </div>
+
+    <!-- ÁREA PRINCIPAL -->
+    <div class="topo-branco">
+        <div class="container topo-main">
+
+            <div class="logos">
+                <img src="img/logo-fatec-taquaritinga.png" class="logo-fatec">
+            </div>
+
+            <div class="busca">
+                <input type="text" placeholder="O que deseja localizar?">
+                <button>🔍</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MENU VERMELHO -->
+    <nav class="menu">
+        <ul class="container">
+            <li>INICIO</li>
+            <li>CURSOS ▾</li>
+            <li>INSTITUCIONAL ▾</li>
+            <li>HORÁRIO DE AULA</li>
+            <li>LINKS ÚTEIS ▾</li>
+            <li>PROFESSOR ▾</li>
+            <li>ALUNO ▾</li>
+            <li>VESTIBULAR ▾</li>
+            <li>AJUDA</li>
+            <a class="link" href="agendamento.html">AGENDAR</a>
+        </ul>
+    </nav>
+
+</header>
+
+ <!-- TÍTULO -->
+    <section class="titulo">
+        <h1>Eventos</h1>
+        <p>Confira os eventos da faculdade</p>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="eventos container">
+
+        <div class="card">
+            <h3>Palestra de Tecnologia</h3>
+            <p>20/04/2026</p>
+            <p>Auditório</p>
+            <button onclick="verDetalhes('Palestra de Tecnologia')">Detalhes</button>
+        </div>
+
+        <div class="card">
+            <h3>Workshop de Programação</h3>
+            <p>25/04/2026</p>
+            <p>Lab 3</p>
+            <button onclick="verDetalhes('Workshop de Programação')">Detalhes</button>
+        </div>
+
+    </section>
+
+
+ </body>
+ </html>
