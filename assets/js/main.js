@@ -40,7 +40,7 @@ function renderizarEventos(lista){
 
     eventosGrid.innerHTML = ""
 
-    lista.forEach(evento => {
+    lista.forEach((evento, index) => { 
 
         eventosGrid.innerHTML += `
 
@@ -66,9 +66,9 @@ function renderizarEventos(lista){
 
                     </div>
 
-                    <button>
-                        Ver detalhes
-                    </button>
+                  <button onclick="abrirModal(${index})">
+                   Ver detalhes
+                  </button>
 
                 </div>
 
@@ -99,5 +99,49 @@ categoriaFiltro.addEventListener("change", () => {
     )
 
     renderizarEventos(filtrados)
+
+})
+
+
+const modalOverlay = document.getElementById("modalOverlay")
+
+const modalTitulo = document.getElementById("modalTitulo")
+const modalCategoria = document.getElementById("modalCategoria")
+const modalData = document.getElementById("modalData")
+const modalLocal = document.getElementById("modalLocal")
+const modalProfessor = document.getElementById("modalProfessor")
+
+function abrirModal(index){
+
+    const evento = eventos[index]
+
+    modalTitulo.textContent = evento.titulo
+
+    modalCategoria.textContent = evento.categoria
+
+    modalData.textContent = `📅 ${evento.data}`
+
+    modalLocal.textContent = `📍 ${evento.local}`
+
+    modalProfessor.textContent = `👨‍🏫 ${evento.professor}`
+
+    modalOverlay.classList.add("active")
+}
+
+const closeModal = document.getElementById("closeModal")
+
+closeModal.addEventListener("click", () => {
+
+    modalOverlay.classList.remove("active")
+
+})
+
+modalOverlay.addEventListener("click", (event) => {
+
+    if(event.target === modalOverlay){
+
+        modalOverlay.classList.remove("active")
+
+    }
 
 })

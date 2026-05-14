@@ -63,9 +63,9 @@
 
             </div>
 
-            <button>
-                Ver detalhes
-            </button>
+           <button onclick="abrirModal(0)">
+           Ver detalhes
+       </button>
 
         </div>
 
@@ -161,7 +161,50 @@
 
     </section>
 
-    <script src="/assets/js/main.js"></script>
+<!-- MODAL -->
+
+<div class="modal-overlay" id="modalOverlay">
+
+    <div class="modal">
+
+        <button class="close-modal" id="closeModal">
+            ✕
+        </button>
+
+        <span class="modal-categoria" id="modalCategoria">
+            Tecnologia
+        </span>
+
+        <h2 id="modalTitulo">
+            Título do Evento
+        </h2>
+
+        <div class="modal-info">
+
+            <p id="modalData">
+                📅 Data
+            </p>
+
+            <p id="modalLocal">
+                📍 Local
+            </p>
+
+            <p id="modalProfessor">
+                👨‍🏫 Professor
+            </p>
+
+        </div>
+
+        <p class="modal-descricao">
+            Evento acadêmico da FATEC voltado ao desenvolvimento
+            profissional e tecnológico dos estudantes.
+        </p>
+
+    </div>
+
+</div>
+
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
