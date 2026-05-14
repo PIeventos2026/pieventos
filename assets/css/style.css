@@ -194,21 +194,51 @@ body{
 
 .filtros-content{
     display: flex;
-    gap: 20px;
+    gap: 18px;
     flex-wrap: wrap;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .filtros select,
 .filtros input{
-    padding: 14px;
+    padding: 14px 18px;
 
-    border: 1px solid #ccc;
+    border: 1px solid #dcdcdc;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     min-width: 220px;
 
+    background: #fafafa;
+
+    color: #333;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+    outline: none;
+}
+
+.filtros select:hover,
+.filtros input:hover{
+    border-color: #b5b5b5;
+}
+
+.filtros select:focus,
+.filtros input:focus{
+    border-color: #003366;
+
     background: white;
+
+    box-shadow: 0 0 0 4px rgba(0,51,102,0.08);
 }
 
 /* EVENTOS */
