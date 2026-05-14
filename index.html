@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FATEC Eventos</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HERO -->
+  <section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="badge">
+                Evento em Destaque
+            </span>
+
+            <h1>
+                Eventos Acadêmicos
+            </h1>
+
+            <p>
+                Descubra palestras, workshops, minicursos e eventos
+                organizados pela FATEC em um único lugar.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+                    Explorar Eventos
+                </button>
+
+                <button class="secondary-btn">
+                    Ver Calendário
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <span class="hero-card-category">
+                Tecnologia
+            </span>
+
+            <h2>
+               Como fazer sistemas com JavaScript e Maizena
+            </h2>
+
+            <div class="hero-card-info">
+
+                <p>📅 20 Maio 2026</p>
+                <p>Professor: Carlão </p>
+                <p>📍 Laboratório 7</p>
+
+            </div>
+
+            <button>
+                Ver detalhes
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- FILTROS -->
+    <section class="filtros">
+
+        <div class="container filtros-content">
+
+            <select id="categoriaFiltro">
+
+                <option value="todos">Todas Categorias</option>
+
+                <option value="Tecnologia">Tecnologia</option>
+
+                <option value="Agronegócio">Agronegócio</option>
+
+                <option value="Workshop">Workshop</option>
+
+                <option value="Palestra">Palestra</option>
+
+            </select>
+
+            <input type="date">
+
+            <select>
+
+                <option>Todas Modalidades</option>
+
+                <option>Presencial</option>
+
+                <option>Online</option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="eventos-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Próximos Eventos</h2>
+
+                <p>
+                    Confira os próximos eventos acadêmicos da FATEC.
+                </p>
+
+            </div>
+
+            <div class="eventos-grid" id="eventosGrid">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CALENDÁRIO -->
+    <section class="calendario-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Calendário Acadêmico</h2>
+
+                <p>
+                    Datas dos próximos eventos.
+                </p>
+
+            </div>
+
+            <div class="calendario-grid">
+
+                <div class="dia">1</div>
+                <div class="dia">2</div>
+                <div class="dia evento">3</div>
+                <div class="dia">4</div>
+                <div class="dia">5</div>
+                <div class="dia evento">6</div>
+                <div class="dia">7</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
