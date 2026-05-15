@@ -1,4 +1,9 @@
 /* RESET */
+:root{
+    --vermelhoescuro: #c40000;
+    --azulescuro: #003366;
+    --aszulclaro: #0055aa;
+}
 
 *{
     margin: 0;
@@ -81,7 +86,7 @@ body{
 /* MENU */
 
 .menu{
-    background: #c40000;
+    background: var(--vermelhoescuro);
 }
 
 .menu ul{
@@ -137,7 +142,7 @@ body{
 .badge{
     display: inline-block;
 
-    background: #c40000;
+    background: var(--vermelhoescuro);
     color: white;
 
     padding: 8px 14px;
@@ -152,7 +157,7 @@ body{
 .hero h1{
     font-size: 3rem;
 
-    color: #003366;
+    color: var(--azulescuro);
 
     margin-bottom: 20px;
 }
@@ -166,7 +171,7 @@ body{
 }
 
 .hero button{
-    background: #003366;
+    background: var(--azulescuro);
     color: white;
 
     border: none;
@@ -234,7 +239,7 @@ body{
 
 .filtros select:focus,
 .filtros input:focus{
-    border-color: #003366;
+    border-color: var(--azulescuro);
 
     background: white;
 
@@ -252,7 +257,7 @@ body{
 }
 
 .section-title h2{
-    color: #003366;
+    color: var(--azulescuro);
 
     font-size: 2rem;
 
@@ -276,7 +281,7 @@ body{
 .card{
     background: white;
 
-    border-left: 5px solid #003366;
+    border-left: 5px solid var(--azulescuro);
 
     border-radius: 15px;
 
@@ -301,8 +306,8 @@ body{
 
     background: linear-gradient(
         135deg,
-        #003366,
-        #0055aa
+        var(--azulescuro),
+        var(--aszulclaro)
     );
 }
 
@@ -318,7 +323,7 @@ body{
 .categoria{
     display: inline-block;
 
-    background: #c40000;
+    background: var(--vermelhoescuro);
     color: white;
 
     padding: 7px 14px;
@@ -333,7 +338,7 @@ body{
 }
 
 .card h3{
-    color: #003366;
+    color: var(--azulescuro);
 
     margin-bottom: 15px;
 
@@ -353,7 +358,7 @@ body{
 .card button{
     width: 100%;
 
-    background: #003366;
+    background: var(--azulescuro);
     color: white;
 
     border: none;
@@ -486,7 +491,7 @@ body{
 .modal-categoria{
     display: inline-block;
 
-    background: #c40000;
+    background: var(--vermelhoescuro);
     color: white;
 
     padding: 8px 14px;
@@ -499,7 +504,7 @@ body{
 }
 
 .modal h2{
-    color: #003366;
+    color: var(--azulescuro);
 
     margin-bottom: 25px;
 }
@@ -521,7 +526,7 @@ body{
 
 
 .dia.evento{
-    background: #c40000;
+    background: var(--vermelhoescuro);
 
     color: white;
 }
