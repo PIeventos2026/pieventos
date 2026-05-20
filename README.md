@@ -11,8 +11,11 @@ A aplicação busca facilitar o acesso às informações dos eventos, permitindo
 ##Autores
 
 Laura Emerich - Desenvolvimento Full Stack e estrutura do projeto - @Eemerichlaura
+
 Vitória Letícia Fernandes - Desenvolvimento Front-End e Auxílio na Interface - @VitoriaLe141
+
 Yasmin Rodrigues Astori -Desenvolvimento do Canva e Mapa Interativo - @yasminastori017-cpu
+
 Sara Lorraine Martins -Testes e Apoio ao Projeto - @saralorrainemartins-pixel
 
 ## 📄Licença
