@@ -15,6 +15,6 @@ Vitória Letícia Fernandes - Desenvolvimento Front-End e Auxílio na Interface 
 Yasmin Rodrigues Astori -Desenvolvimento do Canva e Mapa Interativo - @yasminastori017-cpu
 Sara Lorraine Martins -Testes e Apoio ao Projeto - @saralorrainemartins-pixel
 
-📄 ## Licença
+## 📄Licença
 
 Este projeto foi desenvolvido para fins acadêmicos na FATEC.
