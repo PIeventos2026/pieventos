@@ -10,7 +10,7 @@ A aplicação busca facilitar o acesso às informações dos eventos, permitindo
 
 ##Autores
 
-Laura Emerich - Desenvolvimento Full Stack e estrutura do projeto - @Eemerichlaura
+Laura Francini Emerich - Desenvolvimento Full Stack e estrutura do projeto - @Eemerichlaura
 
 Vitória Letícia Fernandes - Desenvolvimento Front-End e Auxílio na Interface - @VitoriaLe141
 
@@ -20,4 +20,4 @@ Sara Lorraine Martins -Testes e Apoio ao Projeto - @saralorrainemartins-pixel
 
 ## 📄Licença
 
-Este projeto foi desenvolvido para fins acadêmicos na FATEC.
+Este projeto foi desenvolvido para fins acadêmicos na FATEC Taquaritinga.
