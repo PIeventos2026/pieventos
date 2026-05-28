@@ -1,107 +1,78 @@
-const eventos = [
+/* ========================= */
+/* MODAL EDITAR */
+/* precisa ficar no topo para o onclick enxergar */
+/* ========================= */
 
-    {
-        titulo: "Workshop de Desenvolvimento Web",
-        categoria: "Tecnologia",
-        professor: "Gustavo",
-        data: "20 Maio 2026",
-        local: "Lab 3"
-    },
+window.abrirModalEditar = function(
+    id,
+    titulo,
+    descricao,
+    categoria,
+    apresentador,
+    local,
+    data,
+    destaque
+){
 
-    {
-        titulo: "Palestra sobre Agronegócio",
-        categoria: "Agronegócio",
-        professor: "Fulano",
-        data: "25 Maio 2026",
-        local: "Auditório"
-    },
+    const modalEditarOverlay = document.getElementById("modalEditarOverlay")
 
-    {
-        titulo: "Workshop de UX/UI",
-        categoria: "Workshop",
-        professor: "Fulano",
-        data: "30 Maio 2026",
-        local: "Lab 1"
-    },
+    document.getElementById("editarId").value = id
+    document.getElementById("editarTitulo").value = titulo
+    document.getElementById("editarDescricao").value = descricao
+    document.getElementById("editarCategoria").value = categoria
+    document.getElementById("editarApresentador").value = apresentador
+    document.getElementById("editarLocal").value = local
+    document.getElementById("editarData").value = data
+    document.getElementById("editarDestaque").value = destaque
 
-    {
-        titulo: "Palestra de Inteligência Artificial",
-        categoria: "Palestra",
-        professor: "Fulano",
-        data: "02 Junho 2026",
-        local: "Auditório"
-    }
+    modalEditarOverlay.classList.add("active")
 
-]
 
-const eventosGrid = document.getElementById("eventosGrid")
+    
+}
 
-function renderizarEventos(lista){
 
-    eventosGrid.innerHTML = ""
+/* ========================= */
+/* FILTRO DE CATEGORIA */
+/* ========================= */
 
-    lista.forEach((evento, index) => { 
+const categoriaFiltro = document.getElementById("categoriaFiltro")
 
-        eventosGrid.innerHTML += `
+if(categoriaFiltro){
 
-            <div class="card">
+    categoriaFiltro.addEventListener("change", () => {
 
-                <div class="card-banner"></div>
+        const valor = categoriaFiltro.value.toLowerCase().trim()
 
-                <div class="card-content">
+        const cards = document.querySelectorAll(".card-evento")
 
-                    <span class="categoria">
-                        ${evento.categoria}
-                    </span>
+        cards.forEach(card => {
 
-                    <h3>${evento.titulo}</h3>
+            const categoria = card
+                .querySelector(".categoria")
+                .textContent
+                .toLowerCase()
+                .trim()
 
-                    <div class="card-info">
+            if(valor === "todos" || categoria === valor){
 
-                        <p>📅 ${evento.data}</p>
+                card.style.display = "flex"
 
-                        <p>📍 ${evento.local}</p>
+            } else {
 
-                        <p>👨‍🏫 ${evento.professor}</p>
+                card.style.display = "none"
 
-                    </div>
+            }
 
-                  <button onclick="abrirModal(${index})">
-                   Ver detalhes
-                  </button>
+        })
 
-                </div>
-
-            </div>
-
-        `
     })
 
 }
 
-renderizarEventos(eventos)
-
-const categoriaFiltro = document.getElementById("categoriaFiltro")
-
-categoriaFiltro.addEventListener("change", () => {
-
-    const valor = categoriaFiltro.value
-
-    if(valor === "todos"){
-
-        renderizarEventos(eventos)
-
-        return
-    }
-
-    const filtrados = eventos.filter(evento =>
-        evento.categoria === valor
-    )
-
-    renderizarEventos(filtrados)
-
-})
-
+/* ========================= */
+/* MODAL DETALHES */
+/* ========================= */
 
 const modalOverlay = document.getElementById("modalOverlay")
 
@@ -110,38 +81,128 @@ const modalCategoria = document.getElementById("modalCategoria")
 const modalData = document.getElementById("modalData")
 const modalLocal = document.getElementById("modalLocal")
 const modalProfessor = document.getElementById("modalProfessor")
+const modalDescricao = document.getElementById("modalDescricao")
 
-function abrirModal(index){
+window.abrirModal = function(
+    titulo,
+    categoria,
+    data,
+    local,
+    professor,
+    descricao
+){
 
-    const evento = eventos[index]
-
-    modalTitulo.textContent = evento.titulo
-
-    modalCategoria.textContent = evento.categoria
-
-    modalData.textContent = `📅 ${evento.data}`
-
-    modalLocal.textContent = `📍 ${evento.local}`
-
-    modalProfessor.textContent = `👨‍🏫 ${evento.professor}`
+    modalTitulo.textContent = titulo
+    modalCategoria.textContent = categoria
+    modalData.textContent = `📅 ${data}`
+    modalLocal.textContent = `📍 ${local}`
+    modalProfessor.textContent = `👨‍🏫 ${professor}`
+    modalDescricao.textContent = descricao
 
     modalOverlay.classList.add("active")
 }
 
+/* FECHAR MODAL DETALHES */
+
 const closeModal = document.getElementById("closeModal")
 
-closeModal.addEventListener("click", () => {
+if(closeModal){
 
-    modalOverlay.classList.remove("active")
-
-})
-
-modalOverlay.addEventListener("click", (event) => {
-
-    if(event.target === modalOverlay){
+    closeModal.addEventListener("click", () => {
 
         modalOverlay.classList.remove("active")
 
-    }
+    })
 
-})
+}
+
+if(modalOverlay){
+
+    modalOverlay.addEventListener("click", (event) => {
+
+        if(event.target === modalOverlay){
+
+            modalOverlay.classList.remove("active")
+
+        }
+
+    })
+
+}
+
+/* ========================= */
+/* MODAL FORMULÁRIO */
+/* ========================= */
+
+const abrirForm = document.getElementById("abrirForm")
+const modalFormOverlay = document.getElementById("modalFormOverlay")
+const closeFormModal = document.getElementById("closeFormModal")
+
+if(abrirForm){
+
+    abrirForm.addEventListener("click", () => {
+
+        modalFormOverlay.classList.add("active")
+
+    })
+
+}
+
+if(closeFormModal){
+
+    closeFormModal.addEventListener("click", () => {
+
+        modalFormOverlay.classList.remove("active")
+
+    })
+
+}
+
+if(modalFormOverlay){
+
+    modalFormOverlay.addEventListener("click", (event) => {
+
+        if(event.target === modalFormOverlay){
+
+            modalFormOverlay.classList.remove("active")
+
+        }
+
+    })
+
+}
+
+/* ========================= */
+/* FECHAR MODAL EDITAR */
+/* ========================= */
+
+const modalEditarOverlay = document.getElementById("modalEditarOverlay")
+const closeEditarModal = document.getElementById("closeEditarModal")
+
+if(closeEditarModal){
+
+    closeEditarModal.addEventListener("click", () => {
+
+        modalEditarOverlay.classList.remove("active")
+
+    })
+
+}
+
+if(modalEditarOverlay){
+
+    modalEditarOverlay.addEventListener("click", (event) => {
+
+        if(event.target === modalEditarOverlay){
+
+            modalEditarOverlay.classList.remove("active")
+
+        }
+
+    })
+
+}
+
+window.abrirModalEditar = function(){
+    alert("modal editar funcionando")
+}
