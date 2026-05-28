@@ -22,7 +22,7 @@ window.abrirModalEditar = function(
     document.getElementById("editarCategoria").value = categoria
     document.getElementById("editarApresentador").value = apresentador
     document.getElementById("editarLocal").value = local
-    document.getElementById("editarData").value = datagit status
+    document.getElementById("editarData").value = datagit;status
     document.getElementById("editarDestaque").value = destaque
 
     modalEditarOverlay.classList.add("active")
